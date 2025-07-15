@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkle Clean Sydney | Professional Cleaning Services</title>
+    <meta name="description" content="Sydney's trusted cleaning service offering residential and commercial cleaning with 100% satisfaction guarantee.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e40af",
+                        secondary: "#10b981",
+                        accent: "#f59e0b"
+                    },
+                    fontFamily: {
+                        sans: ['"Open Sans"', 'sans-serif'],
+                        heading: ['"Montserrat"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Cookie Notice -->
+    <div id="cookieNotice" class="fixed bottom-0 left-0 right-0 bg-white shadow-lg p-4 z-50 hidden">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <p class="text-gray-700 mb-4 md:mb-0">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <div class="flex space-x-2">
+                <button onclick="acceptCookies()" class="bg-primary text-white px-4 py-2 rounded hover:bg-blue-800 transition">Accept</button>
+                <button onclick="declineCookies()" class="border border-gray-300 px-4 py-2 rounded hover:bg-gray-100 transition">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center py-4">
+                <a href="#" class="flex items-center">
+                    <span class="text-2xl font-bold text-primary">Sparkle<span class="text-secondary">Clean</span></span>
+                </a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-primary font-medium">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary font-medium">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary font-medium">Services</a>
+                    <a href="#blog" class="text-gray-700 hover:text-primary font-medium">Blog</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <a href="#login" class="text-gray-700 hover:text-primary">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="#book" class="bg-primary text-white px-4 py-2 rounded hover:bg-blue-800 transition">Book Now</a>
+                    <button id="mobileMenuButton" class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </nav>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden bg-white py-4 border-t">
+                <div class="flex flex-col space-y-3">
+                    <a href="#" class="text-gray-700 hover:text-primary">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary">Services</a>
+                    <a href="#blog" class="text-gray-700 hover:text-primary">Blog</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
+                    <a href="#login" class="text-gray-700 hover:text-primary">Login</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-primary to-blue-700 text-white py-16 md:py-24">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 font-heading">Sydney's Trusted Cleaning Service</h1>
+                    <p class="text-xl mb-8">Professional cleaning services for homes and offices across Sydney. 100% satisfaction guaranteed.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#book" class="bg-secondary hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg text-center transition">Book Online Now</a>
+                        <a href="#services" class="bg-white hover:bg-gray-100 text-primary font-bold py-3 px-6 rounded-lg text-center transition">Our Services</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://picsum.photos/600/400?random=1" alt="Professional cleaning team at work" class="rounded-lg shadow-xl" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Signals -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="p-4">
+                        <div class="text-4xl text-primary mb-2"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="font-bold mb-1">Fully Insured</h3>
+                        <p class="text-gray-600 text-sm">$2M Public Liability</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-4xl text-primary mb-2"><i class="fas fa-check-circle"></i></div>
+                        <h3 class="font-bold mb-1">100% Guarantee</h3>
+                        <p class="text-gray-600 text-sm">Satisfaction Guaranteed</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-4xl text-primary mb-2"><i class="fas fa-user-tie"></i></div>
+                        <h3 class="font-bold mb-1">Professional Team</h3>
+                        <p class="text-gray-600 text-sm">Background Checked</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-4xl text-primary mb-2"><i class="fas fa-leaf"></i></div>
+                        <h3 class="font-bold mb-1">Eco-Friendly</h3>
+                        <p class="text-gray-600 text-sm">Green Products</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Preview -->
+        <section id="services" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 font-heading">Our Cleaning Services</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">We offer a comprehensive range of cleaning services tailored to your needs.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                        <img src="https://picsum.photos/400/300?random=2" alt="Residential cleaning service" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Residential Cleaning</h3>
+                            <p class="text-gray-600 mb-4">Thorough cleaning of your home from top to bottom, including all living areas, bedrooms, and bathrooms.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-primary">From $120</span>
+                                <a href="#book" class="text-secondary hover:text-green-600 font-medium">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                        <img src="https://picsum.photos/400/300?random=3" alt="Office cleaning service" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Commercial Cleaning</h3>
+                            <p class="text-gray-600 mb-4">Professional cleaning for offices, retail spaces, and commercial properties to maintain a pristine environment.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-primary">From $250</span>
+                                <a href="#book" class="text-secondary hover:text-green-600 font-medium">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                        <img src="https://picsum.photos/400/300?random=4" alt="Deep cleaning service" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Deep Cleaning</h3>
+                            <p class="text-gray-600 mb-4">Intensive cleaning service that reaches all the often-neglected areas of your home or office.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-primary">From $350</span>
+                                <a href="#book" class="text-secondary hover:text-green-600 font-medium">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-10">
+                    <a href="#all-services" class="inline-block bg-primary hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition">View All Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                        <img src="https://picsum.photos/500/400?random=5" alt="Our cleaning team" class="rounded-lg shadow-lg" loading="lazy">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-6 font-heading">About Sparkle Clean Sydney</h2>
+                        <p class="text-gray-600 mb-4">Founded in 2015, Sparkle Clean Sydney has grown from a small local business to one of Sydney's most trusted cleaning services. Our mission is to provide exceptional cleaning services while maintaining the highest standards of professionalism and customer care.</p>
+                        <p class="text-gray-600 mb-6">All our team members undergo thorough background checks and receive extensive training to ensure they meet our exacting standards. We use only eco-friendly cleaning products that are safe for your family, pets, and the environment.</p>
+                        
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="#team" class="bg-primary hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg text-center transition">Meet Our Team</a>
+                            <a href="#reviews" class="border border-primary text-primary hover:bg-blue-50 font-bold py-3 px-6 rounded-lg text-center transition">Read Reviews</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 font-heading">What Our Clients Say</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Don't just take our word for it - here's what our customers have to say about our services.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">2 weeks ago</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">"The team did an amazing job cleaning our office. Everything was spotless and they were very professional. Will definitely use them again!"</p>
+                        <div class="flex items-center">
+                            <img src="https://picsum.photos/50?random=6" alt="Sarah J." class="w-10 h-10 rounded-full mr-3" loading="lazy">
+                            <div>
+                                <h4 class="font-bold">Sarah J.</h4>
+                                <p class="text-gray-600 text-sm">Bondi Junction</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">1 month ago</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">"I've tried several cleaning services in Sydney and Sparkle Clean is by far the best. They pay attention to every detail and my home has never looked better."</p>
+                        <div class="flex items-center">
+                            <img src="https://picsum.photos/50?random=7" alt="Michael T." class="w-10 h-10 rounded-full mr-3" loading="lazy">
+                            <div>
+                                <h4 class="font-bold">Michael T.</h4>
+                                <p class="text-gray-600 text-sm">Manly</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">3 days ago</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">"Excellent service! The cleaners arrived on time, were very thorough, and left my apartment sparkling clean. Highly recommend!"</p>
+                        <div class="flex items-center">
+                            <img src="https://picsum.photos/50?random=8" alt="Lisa M." class="w-10 h-10 rounded-full mr-3" loading="lazy">
+                            <div>
+                                <h4 class="font-bold">Lisa M.</h4>
+                                <p class="text-gray-600 text-sm">Surry Hills</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="book" class="py-16 bg-primary text-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold mb-4 font-heading">Book Your Cleaning Service</h2>
+                        <p class="text-blue-100">Schedule your cleaning service in just a few clicks. Choose from our range of services and available time slots.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                        <form id="bookingForm" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="service" class="block text-gray-700 font-medium mb-2">Service Type</label>
+                                    <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                        <option value="">Select a service</option>
+                                        <option value="residential">Residential Cleaning</option>
+                                        <option value="commercial">Commercial Cleaning</option>
+                                        <option value="deep">Deep Cleaning</option>
+                                        <option value="carpet">Carpet Cleaning</option>
+                                        <option value="window">Window Cleaning</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="date" class="block text-gray-700 font-medium mb-2">Preferred Date</label>
+                                    <input type="date" id="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                    <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                </div>
+                                <div>
+                                    <label for="time" class="block text-gray-700 font-medium mb-2">Preferred Time</label>
+                                    <select id="time" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                        <option value="">Select a time</option>
+                                        <option value="morning">Morning (8am-12pm)</option>
+                                        <option value="afternoon">Afternoon (12pm-4pm)</option>
+                                        <option value="evening">Evening (4pm-8pm)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="address" class="block text-gray-700 font-medium mb-2">Service Address</label>
+                                <textarea id="address" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"></textarea>
+                            </div>
+                            
+                            <div>
+                                <label for="notes" class="block text-gray-700 font-medium mb-2">Special Instructions</label>
+                                <textarea id="notes" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"></textarea>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="terms" class="w-4 h-4 text-primary rounded focus:ring-primary">
+                                <label for="terms" class="ml-2 text-gray-700">I agree to the <a href="#terms" class="text-primary hover:underline">Terms of Service</a> and <a href="#privacy" class="text-primary hover:underline">Privacy Policy</a></label>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-secondary hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition">Confirm Booking</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Preview -->
+        <section id="blog" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 font-heading">Cleaning Tips & News</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Stay updated with our latest cleaning tips, company news, and special offers.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                        <img src="https://picsum.photos/400/300?random=9" alt="Eco-friendly cleaning" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <span class="text-secondary text-sm font-medium">Cleaning Tips</span>
+                            <h3 class="text-xl font-bold mb-2 mt-1">5 Eco-Friendly Cleaning Solutions</h3>
+                            <p class="text-gray-600 mb-4">Discover how to clean your home effectively while being kind to the environment.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-500 text-sm">June 15, 2023</span>
+                                <a href="#read-more" class="text-primary hover:text-blue-800 font-medium">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                        <img src="https://picsum.photos/400/300?random=10" alt="Office cleaning" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <span class="text-secondary text-sm font-medium">Company News</span>
+                            <h3 class="text-xl font-bold mb-2 mt-1">New Commercial Cleaning Packages</h3>
+                            <p class="text-gray-600 mb-4">We've expanded our commercial cleaning services to better serve Sydney businesses.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-500 text-sm">May 28, 2023</span>
+                                <a href="#read-more" class="text-primary hover:text-blue-800 font-medium">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+                        <img src="https://picsum.photos/400/300?random=11" alt="Spring cleaning" class="w-full h-48 object-cover" loading="lazy">
+                        <div class="p-6">
+                            <span class="text-secondary text-sm font-medium">Seasonal</span>
+                            <h3 class="text-xl font-bold mb-2 mt-1">Your Ultimate Spring Cleaning Checklist</h3>
+                            <p class="text-gray-600 mb-4">Get your home sparkling clean this spring with our comprehensive checklist.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-500 text-sm">April 5, 2023</span>
+                                <a href="#read-more" class="text-primary hover:text-blue-800 font-medium">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="text-center mt-10">
+                    <a href="#all-posts" class="inline-block bg-primary hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition">View All Blog Posts</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8 text-center">
+                    <h2 class="text-2xl font-bold mb-4 font-heading">Subscribe to Our Newsletter</h2>
+                    <p class="text-gray-600 mb-6">Get cleaning tips, special offers, and company updates delivered to your inbox.</p>
+                    
+                    <form id="newsletterForm" class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" placeholder="Your email address" class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                        <button type="submit" class="bg-secondary hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg transition">Subscribe</button>
+                    </form>
+                    
+                    <p class="text-gray-500 text-sm mt-4">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                        <h2 class="text-3xl font-bold mb-6 font-heading">Contact Us</h2>
+                        <p class="text-gray-600 mb-6">Have questions or need more information about our services? Get in touch with our friendly team.</p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <div class="text-primary mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Our Office</h4>
+                                    <p class="text-gray-600">123 Clean Street, Sydney NSW 2000</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-primary mr-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Phone</h4>
+                                    <p class="text-gray-600">(02) 9876 5432</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-primary mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Email</h4>
+                                    <p class="text-gray-600">hello@sparklecleansydney.com.au</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-primary mr-4 mt-1">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Business Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 8am - 6pm<br>Saturday: 9am - 4pm<br>Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:text-blue-800 text-xl"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-primary hover:text-blue-800 text-xl"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-primary hover:text-blue-800 text-xl"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h3 class="text-xl font-bold mb-6">Send Us a Message</h3>
+                            <form id="contactForm" class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="contactName" class="block text-gray-700 font-medium mb-1">Name</label>
+                                        <input type="text" id="contactName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                    </div>
+                                    <div>
+                                        <label for="contactEmail" class="block text-gray-700 font-medium mb-1">Email</label>
+                                        <input type="email" id="contactEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="contactSubject" class="block text-gray-700 font-medium mb-1">Subject</label>
+                                    <input type="text" id="contactSubject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                                </div>
+                                
+                                <div>
+                                    <label for="contactMessage" class="block text-gray-700 font-medium mb-1">Message</label>
+                                    <textarea id="contactMessage" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-primary hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition">Send Message</button>
+                            </form>
+                        </div>
+                        
+                        <div class="mt-8 h-64 bg-gray-200 rounded-lg overflow-hidden">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.647527752395!2d151.2073223152106!3d-33.86782698065596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae665e892fdd%3A0x3133f8d75a1ac251!2sSydney%20Opera%20House!5e0!3m2!1sen!2sau!4v1625555555555!5m2!1sen!2sau" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-heading">Sparkle Clean Sydney</h3>
+                    <p class="text-gray-400 mb-4">Sydney's trusted cleaning service offering residential and commercial cleaning with 100% satisfaction guarantee.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#blog" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Residential Cleaning</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Commercial Cleaning</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Deep Cleaning</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Carpet Cleaning</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Window Cleaning</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-2 mt-1"></i>
+                            <span>123 Clean Street, Sydney NSW 2000</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mr-2 mt-1"></i>
+                            <span>(02) 9876 5432</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mr-2 mt-1"></i>
+                            <span>hello@sparklecleansydney.com.au</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Sparkle Clean Sydney. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#privacy" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#terms" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#cookies" class="text-gray-400 hover:text-white">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Chat Widget -->
+    <div id="liveChatWidget" class="fixed bottom-6 right-6 z-50">
+        <button onclick="toggleChat()" class="bg-primary hover:bg-blue-800 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg transition">
+            <i class="fas fa-comment-dots text-2xl"></i>
+        </button>
+        
+        <div id="chatWindow" class="hidden absolute bottom-20 right-0 w-80 bg-white rounded-lg shadow-xl overflow-hidden">
+            <div class="bg-primary text-white p-4 flex justify-between items-center">
+                <h3 class="font-bold">Live Chat</h3>
+                <button onclick="toggleChat()" class="text-white hover:text-gray-200">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="chatMessages" class="p-4 h-64 overflow-y-auto">
+                <div class="text-center text-gray-500 py-8">
+                    <p>Our team is ready to help you!</p>
+                </div>
+            </div>
+            
+            <div class="border-t p-4">
+                <div class="flex">
+                    <input type="text" placeholder="Type your message..." class="flex-grow px-4 py-2 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                    <button class="bg-primary hover:bg-blue-800 text-white px-4 py-2 rounded-r-lg">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-md">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold">Customer Login</h3>
+                    <button onclick="closeModal('loginModal')" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <form id="loginForm" class="space-y-4">
+                    <div>
+                        <label for="loginEmail" class="block text-gray-700 font-medium mb-1">Email</label>
+                        <input type="email" id="loginEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                    </div>
+                    
+                    <div>
+                        <label for="loginPassword" class="block text-gray-700 font-medium mb-1">Password</label>
+                        <input type="password" id="loginPassword" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary">
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="rememberMe" class="w-4 h-4 text-primary rounded focus:ring-primary">
+                            <label for="rememberMe" class="ml-2 text-gray-700">Remember me</label>
+                        </div>
+                        <a href="#forgot-password" class="text-primary hover:text-blue-800 text-sm">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-primary hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition">Login</button>
+                    
+                    <div class="text-center">
+                        <p class="text-gray-600">Don't have an account? <a href="#register" class="text-primary hover:text-blue-800">Register here</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize data
+        const services = [
+            { "id": 1, "name": "Residential Cleaning", "price": 120, "description": "Thorough cleaning of your home from top to bottom" },
+            { "id": 2, "name": "Commercial Cleaning", "price": 250, "description": "Professional cleaning for offices and businesses" },
+            { "id": 3, "name": "Deep Cleaning", "price": 350, "description": "Intensive cleaning reaching all often-neglected areas" },
+            { "id": 4, "name": "Carpet Cleaning", "price": 180, "description": "Specialized cleaning for all types of carpets" },
+            { "id": 5, "name": "Window Cleaning", "price": 150, "description": "Interior and exterior window cleaning service" }
+        ];
+
+        const testimonials = [
+            { "id": 1, "name": "Sarah J.", "location": "Bondi Junction", "rating": 5, "content": "The team did an amazing job cleaning our office. Everything was spotless and they were very professional. Will definitely use them again!", "date": "2 weeks ago" },
+            { "id": 2, "name": "Michael T.", "location": "Manly", "rating": 5, "content": "I've tried several cleaning services in Sydney and Sparkle Clean is by far the best. They pay attention to every detail and my home has never looked better.", "date": "1 month ago" },
+            { "id": 3, "name": "Lisa M.", "location": "Surry Hills", "rating": 4.5, "content": "Excellent service! The cleaners arrived on time, were very thorough, and left my apartment sparkling clean. Highly recommend!", "date": "3 days ago" }
+        ];
+
+        const blogPosts = [
+            { "id": 1, "title": "5 Eco-Friendly Cleaning Solutions", "category": "Cleaning Tips", "excerpt": "Discover how to clean your home effectively while being kind to the environment.", "date": "June 15, 2023" },
+            { "id": 2, "title": "New Commercial Cleaning Packages", "category": "Company News", "excerpt": "We've expanded our commercial cleaning services to better serve Sydney businesses.", "date": "May 28, 2023" },
+            { "id": 3, "title": "Your Ultimate Spring Cleaning Checklist", "category": "Seasonal", "excerpt": "Get your home sparkling clean this spring with our comprehensive checklist.", "date": "April 5, 2023" }
+        ];
+
+        // DOM Ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show cookie notice if not accepted
+            if (!localStorage.getItem('cookieAccepted')) {
+                document.getElementById('cookieNotice').classList.remove('hidden');
+            }
+
+            // Mobile menu toggle
+            document.getElementById('mobileMenuButton').addEventListener('click', function() {
+                document.getElementById('mobileMenu').classList.toggle('hidden');
+            });
+
+            // Login modal
+            document.querySelectorAll('[href="#login"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.getElementById('loginModal').classList.remove('hidden');
+                });
+            });
+
+            // Form submissions
+            document.getElementById('bookingForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your booking request! We will contact you shortly to confirm your appointment.');
+                this.reset();
+            });
+
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! We will get back to you as soon as possible.');
+                this.reset();
+            });
+
+            document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for subscribing to our newsletter!');
+                this.reset();
+            });
+
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Login functionality would connect to your backend system.');
+                closeModal('loginModal');
+            });
+        });
+
+        // Cookie functions
+        function acceptCookies() {
+            localStorage.setItem('cookieAccepted', 'true');
+            document.getElementById('cookieNotice').classList.add('hidden');
+        }
+
+        function declineCookies() {
+            localStorage.setItem('cookieDeclined', 'true');
+            document.getElementById('cookieNotice').classList.add('hidden');
+        }
+
+        // Chat functions
+        function toggleChat() {
+            document.getElementById('chatWindow').classList.toggle('hidden');
+        }
+
+        // Modal functions
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
